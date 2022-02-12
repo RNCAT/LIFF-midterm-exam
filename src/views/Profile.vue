@@ -8,7 +8,7 @@
     <h3>Version:{{ profile.version }}</h3>
     <h3 v-if="profile.isInClient">Is in client: LIFF browser</h3>
     <h3 v-else>Is in client: External browser</h3>
-    <button v-if="profile.isInClient" @click="closeLiff">Close</button>
+    <button class="btn btn-danger" v-if="profile.isInClient" @click="closeLiff">Close</button>
   </div>
 </template>
 

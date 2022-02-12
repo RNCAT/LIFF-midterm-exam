@@ -8,7 +8,7 @@
       alt="logog"
     />
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum tempore iste nam. Illo culpa veritatis obcaecati iusto id unde nostrum, similique molestias. Optio praesentium sunt quisquam ea enim iste aspernatur!</p>
-    <button v-if="isInClient" @click="closeLiff">Close</button>
+    <button class="btn btn-danger" v-if="isInClient" @click="closeLiff">Close</button>
   </div>
 </template>
 
