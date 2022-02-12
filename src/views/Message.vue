@@ -1,8 +1,10 @@
 <template>
   <div id="message">
-    <button id="btnDirection" @click="sendDirection">Direction</button>
-    <button id="btnPicture" @click="sendPicture">Picture</button>
-    <button v-if="isInClient" @click="closeLiff">Close</button>
+    <button class="btn btn-primary" id="btnDirection" @click="sendDirection">Direction</button>
+    <p>ส่งพิกัดตำแหน่งที่ตั้งหลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏสงขลา</p>
+    <button class="btn btn-success" id="btnPicture" @click="sendPicture">Picture</button>
+    <p>ส่งภาพหลักสูตรวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏสงขลา</p>
+    <button class="btn btn-danger" v-if="isInClient" @click="closeLiff">Close</button>
   </div>
 </template>
 
@@ -23,13 +25,13 @@ export default {
     this.isInClient = liff.isInClient()
 
 
+
     if (!this.isInClient) {
       document.getElementById("btnDirection").setAttribute("disabled", "")
       document.getElementById("btnPicture").setAttribute("disabled", "")
     } else {
       await this.getUserProfile()
     }
-
   },
   methods: {
     async sendDirection() {
@@ -71,7 +73,7 @@ export default {
 </script>
 
 <style>
-#profile {
-  text-align: center;
+#message {
+  margin-top: 20%;
 }
 </style>
